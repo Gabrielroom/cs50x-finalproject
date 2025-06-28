@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-body">
+
+     <!-- Main Screen -->
+      <div id="main-screen" class="hidden">
+        <h1>Estoque</h1>
+        <div class="button-group">
+            <button onclick="openAddProductModal()">Cadastrar Estoque</button>
+             <button onclick="openAddQuantityModal()">Adicionar Estoque</button>
+      </div>
+      
+
+      <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Tipo</th>
+                    <th>Cadastrado em</th>
+                    <th>Última atualização</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="product-table"></tbody>
+        </table>
+      </div>
+
+      <div id="pagination" class="pagination"></div>
+
+    </div>
+
+    <!-- Modal Cadastrar -->
+     <div id="add-product-modal" class="modal hidden">
+        <h2>Cadastrar Produto</h2>
+        <input type="text" id="new-name" placeholder="Nome do produto" />
+        <input type="number" id="new-qty" placeholder="Quantidade" />
+        <input type="text" id="new-type" placeholder="Tipo (alimento, limpeza...)" />
+        <button onclick="addProduct()">Salvar</button>
+        <button onclick="closeModal('add-product-modal')">Cancelar</button>
+     </div>
+
+    <!-- Modal Adicionar -->
+     <div id="add-quantity-modal" class="modal hidden">
+        <h2>Adicionar Quantidade</h2>
+        <select id="product-select"></select>
+        <input type="number" id="add-qty" placeholder="Quantidade a adicionar" />
+        <button onclick="addQuantity()">Adicionar</button>
+        <button onclick="closeModal('add-quantity-modal')">Cancelar</button>
+     </div>
+
+
+    <!-- Login  -->
+    <div id="login-screen" class="login-box">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuário" />
+        <input type="password" id="password" placeholder="Senha" />
+        <button onclick="login()">Entrar</button>
+        <button onclick="openRegister()">Cadastrar</button>
+    </div>
+
+    <!-- Register  -->
+    <div id="register-screen" class="modal hidden">
+        <h2>Cadastro de Usuário</h2>
+        <input type="text" id="reg-username" placeholder="Novo Usuário" />
+        <input type="password" id="reg-password" placeholder="Nova Senha" />
+        <button onclick="register()">Registrar</button>
+        <button onclick="closeRegister()">Cancelar</button>
+    </div>
+
+
+     <script src="script.js"></script>
+</body>
+</html>
