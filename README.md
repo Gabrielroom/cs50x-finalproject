@@ -1,4 +1,4 @@
-﻿# cs50x-finalproject-1
+﻿# cs50x-finalproject-
  My Web Stock Management System Video Demo: https://www.youtube.com/watch?v=QxJ9rfri4 Description: For my CS50x final project, I developed a simple but functional web-based stock management system called "Web Stock Management System". The main goal of this project was to create a small software that allows users to register products, add quantities to the stock, and manage inventory through a web interface. Additionally, the project includes login and user registration functionalities with basic form validation.
 
 The system was developed using HTML, CSS, and pure JavaScript (without any frameworks or external libraries), following the core web development concepts learned during the course.
